@@ -1,0 +1,74 @@
+/* Header styles */
+.header {
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid #1f2937;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #d1d5db;
+  }
+  
+  .cart-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cart-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .generics {
+    background-color: #808080; /* Gray background color */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: bold; /* Makes the font bolder */
+  }
+  
