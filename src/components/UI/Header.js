@@ -1,30 +1,32 @@
-import About from "../About/About";
-import Cart from "../Cart/Cart";
-import Home from "../Home/Home";
-import Store from "../Store/Store";
+import React from 'react';
+import Button from './Button'; // Assuming Button component exists
 import './Header.css';
+import CartItems from '../Cart/CartItems';
 
 const Header = () => {
-    return (
-        <>
-        <div className="header">
-            <div className="container">
-                <nav className="nav">
-                    <a href="#" className="nav-link"><Home /></a>
-                    <a href="#" className="nav-link"><Store /></a>
-                    <a href="#" className="nav-link"><About /></a>
-                </nav>
-                <a href="#" className="cart-button">
-                    <Cart />
-                    <span className="cart-count">3</span> {/* Example cart count */}
-                </a>
-            </div>
-        </div>
-        <div className="generics">Generics</div>
-        </>
-        
+  return (
+    <>
+      <div className="horizontal-strip">
+        {/* Left-aligned content (optional, e.g., logo) */}
+        <div></div>
 
-    );
-}
+        {/* Middle-aligned navigation links */}
+        <ul className="nav-links">
+          <li>Home</li>
+          <li>Store</li>
+          <li>About</li>
+        </ul>
+
+        {/* Right-aligned Cart Button */}
+        <div className="container-with-cart">
+          <Button text="Cart" />
+        </div>
+      </div>
+      <div className="generics">The Generics</div>
+      <CartItems/>
+      
+    </>
+  );
+};
 
 export default Header;

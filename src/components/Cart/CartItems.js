@@ -1,3 +1,7 @@
+import Button from '../UI/Button';
+import './CartItems.css'
+
+
 const CartItems = () => {
     const cartElements = [
         {
@@ -26,13 +30,21 @@ const CartItems = () => {
     );
 
     return (
-     <table className=".card">
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Quantity</th>
+    <div className="cart-container">
+        <table className="">
+        <h1 className="cart-header">Cart
+        <Button text="X" className="close-button"/>
+        </h1>
+       
+        <tr className="cart-columns">
+            <th className='column-header'>Item</th>
+            <th className='column-header'>Price</th>
+            <th className='column-header'>Quantity</th>
         </tr>
      </table>
+     <Button text="Purchase" className="purchase-button"/>
+    </div>
+   
   );
 };
 

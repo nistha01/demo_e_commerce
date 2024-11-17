@@ -1,74 +1,64 @@
-/* Header styles */
-.header {
-    width: 100%;
-    background-color: black;
-    border-bottom: 1px solid #1f2937;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    padding: 0 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #d1d5db;
-  }
-  
-  .cart-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    font-size: 14px;
-    color: black;
-    background-color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .cart-button:hover {
-    background-color: #f3f4f6;
-  }
-  
-  .cart-count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+.horizontal-strip {
+  background-color: black; /* Black background */
+  height: 50px; /* Fixed height */
+  width: 100%; /* Full width */
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between left, middle, and right */
+  color: white; /* Text color for items */
+  padding: 0 20px; /* Padding for the left and right edges */
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  overflow-x: hidden;
+  font-size: xx-large; /* Prevents horizontal scrolling */
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .generics {
-    background-color: #808080; /* Gray background color */
-    color: white; /* White text color */
-    text-align: center;
-    padding: 20px 0;
-    font-size: 3rem; /* Adjust font size as needed */
-    font-weight: bold; /* Makes the font bolder */
-  }
-  
+.nav-links {
+  display: flex; /* Flexbox for horizontal alignment */
+  justify-content: center; /* Centers the links */
+  gap: 40px; /* Increases spacing between links */
+  list-style: none; /* Removes default list styling */
+  margin: 0; /* Resets margin */
+  padding: 0; /* Resets padding */
+}
+
+.nav-links li {
+  color: white; /* Text color for links */
+  cursor: pointer; /* Pointer cursor for hover */
+}
+
+.nav-links li:hover {
+  text-decoration:  /* Optional: Underline on hover */
+}
+
+.container-with-cart {
+  display: flex; /* Flexbox to align the button */
+  justify-content: flex-end; /* Pushes button to the right */
+}
+
+.container-with-cart button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Removes button border */
+  padding: 10px 20px; /* Adds padding to button */
+  border-radius: 5px; /* Rounds button corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.container-with-cart button:hover {
+  background-color: #0056b3; /* Hover background color */
+}
+.generics {
+  background-color: rgb(83, 81, 81); /* Black background */
+  height: 120px; /* Fixed height */
+  width: 100%; /* Full width */
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between left, middle, and right */
+  color: white; /* Text color for items */
+  padding: 20px 20px; /* Padding for the left and right edges */
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  overflow-x: hidden;
+  overflow-y: hidden; /* Prevents horizontal scrolling */
+  font-size: 100px;
+  justify-content: center;
+}
