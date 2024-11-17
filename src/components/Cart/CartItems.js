@@ -2,7 +2,7 @@ import Button from '../UI/Button';
 import './CartItems.css'
 
 
-const CartItems = () => {
+const CartItems = (props) => {
     const cartElements = [
         {
             title: 'Colors',

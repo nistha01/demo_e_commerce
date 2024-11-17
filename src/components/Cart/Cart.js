@@ -1,18 +1,14 @@
 import { useState } from "react";
 import Button from "../UI/Button";
 
+const Cart = () => {
+ 
 
-
-
-const Cart= () =>{
-    const [cartStatus,setCartStatus]=useState()
-return(
+  return (
     <>
-    <Button text="Cart"/>
-   
-    
+     
     </>
-    
-);
+  );
 };
+
 export default Cart;

@@ -1,9 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Button from './Button'; // Assuming Button component exists
 import './Header.css';
 import CartItems from '../Cart/CartItems';
+import Cart from '../Cart/Cart';
+
 
 const Header = () => {
+    const [cartIsShown, setCartIsShown] = useState(false);
+
+    const toggleCartStatus = () => {
+        setCartIsShown((prevStatus) => !prevStatus);
+    };
   return (
     <>
       <div className="horizontal-strip">
@@ -23,7 +30,7 @@ const Header = () => {
         </div>
       </div>
       <div className="generics">The Generics</div>
-      <CartItems/>
+     { cartIsShown&& <CartItems onClick={toggleCartStatus}/>}
       
     </>
   );
