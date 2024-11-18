@@ -1,6 +1,5 @@
 import Button from '../UI/Button';
-import './CartItems.css'
-
+import './CartItems.css';
 
 const CartItems = (props) => {
     const cartElements = [
@@ -29,23 +28,49 @@ const CartItems = (props) => {
         0
     );
 
+    const handleClick = () => {
+        props.closeCart();
+    };
+
     return (
-    <div className="cart-container">
-        <table className="">
-        <h1 className="cart-header">Cart
-        <Button text="X" className="close-button"/>
-        </h1>
-       
-        <tr className="cart-columns">
-            <th className='column-header'>Item</th>
-            <th className='column-header'>Price</th>
-            <th className='column-header'>Quantity</th>
-        </tr>
-     </table>
-     <Button text="Purchase" className="purchase-button"/>
-    </div>
-   
-  );
+        <div className="cart-container">
+            <header className="cart-header">
+                <h1>Cart</h1>
+                <Button text="X" className="close-button" onClick={handleClick} />
+            </header>
+
+            <div className="cart-items">
+                <div className="cart-header-row">
+                    <h2>Item</h2>
+                    <h2>Price</h2>
+                    <h2>Quantity</h2>
+                </div>
+                {cartElements.map((item, index) => (
+                    <div key={index} className="cart-row">
+                        <div className="cart-item">
+                            <img
+                                src={item.imageUrl}
+                                alt={item.title}
+                                className="cart-image"
+                            />
+                            <span className="item-title">{item.title}</span>
+                        </div>
+                        <div className="cart-price">
+                            <span>${item.price}</span>
+                        </div>
+                        <div className="cart-quantity">
+                            <span>{item.quantity}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="cart-total">
+                <h2>Total: ${totalPrice}</h2>
+                <Button text="Purchase" className="purchase-button" />
+            </div>
+        </div>
+    );
 };
 
 export default CartItems;
