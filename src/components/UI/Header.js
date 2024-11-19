@@ -5,7 +5,7 @@ import CartItems from '../Cart/CartItems';
 import Cart from '../Cart/Cart';
 
 
-const Header = (props) => {
+const Header = () => {
     const [cartIsShown, setCartIsShown] = useState(false);
 
     const toggleCartStatus = () => {

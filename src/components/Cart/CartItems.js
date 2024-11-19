@@ -1,42 +1,23 @@
+import React, { useContext } from 'react';
+import CartContext from './CartContext';
 import Button from '../UI/Button';
 import './CartItems.css';
 
-const CartItems = (props) => {
-    const cartElements = [
-        {
-            title: 'Colors',
-            price: 100,
-            imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-            quantity: 2,
-        },
-        {
-            title: 'Black and white Colors',
-            price: 50,
-            imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-            quantity: 3,
-        },
-        {
-            title: 'Yellow and Black Colors',
-            price: 70,
-            imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-            quantity: 1,
-        },
-    ];
+const CartItems = ({ closeCart }) => {
+   
+    const { cartItems, removeFromCart } = useContext(CartContext);
 
-    const totalPrice = cartElements.reduce(
+   
+    const totalPrice = cartItems.reduce(
         (total, item) => total + item.price * item.quantity,
         0
     );
-
-    const handleClick = () => {
-        props.closeCart();
-    };
 
     return (
         <div className="cart-container">
             <header className="cart-header">
                 <h1>Cart</h1>
-                <Button text="X" className="close-button" onClick={handleClick} />
+                <Button text="X" className="close-button" onClick={closeCart} />
             </header>
 
             <div className="cart-items">
@@ -45,8 +26,8 @@ const CartItems = (props) => {
                     <h2>Price</h2>
                     <h2>Quantity</h2>
                 </div>
-                {cartElements.map((item, index) => (
-                    <div key={index} className="cart-row">
+                {cartItems.map((item) => (
+                    <div key={item.id} className="cart-row">
                         <div className="cart-item">
                             <img
                                 src={item.imageUrl}
@@ -60,6 +41,13 @@ const CartItems = (props) => {
                         </div>
                         <div className="cart-quantity">
                             <span>{item.quantity}</span>
+                        </div>
+                        <div className="cart-actions">
+                            <Button
+                                text="Remove"
+                                className="remove-button"
+                                onClick={() => removeFromCart(item.id)}
+                            />
                         </div>
                     </div>
                 ))}
