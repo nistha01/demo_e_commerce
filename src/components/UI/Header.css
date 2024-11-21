@@ -19,12 +19,19 @@
   list-style: none; /* Removes default list styling */
   margin: 0; /* Resets margin */
   padding: 0; /* Resets padding */
+  
 }
 
 .nav-links li {
-  color: white; /* Text color for links */
+  color: rgb(250, 248, 248); /* Text color for links */
   cursor: pointer; /* Pointer cursor for hover */
 }
+.nav-links link {
+  text-decoration: none; /* Removes the underline */
+  color: white; /* Sets the text color to white */
+  font-size: 16px; /* Adjusts the font size (optional) */
+}
+
 
 
 
