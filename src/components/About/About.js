@@ -2,9 +2,10 @@ import Button from "../UI/Button";
 
 const About=()=>{
     return(
-       <Button
-       text="About"
-       ></Button>
+      <>
+      this is all about.
+
+      </>
     )
 
 }

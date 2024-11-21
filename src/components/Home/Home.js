@@ -3,7 +3,9 @@ import Button from "../UI/Button";
 
 const Home = () =>{
     return(
-       <Button text="Home"/>
+       <>
+       Here your are in home.
+       </>
     )
     
 }
