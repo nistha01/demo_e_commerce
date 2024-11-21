@@ -26,9 +26,7 @@
   cursor: pointer; /* Pointer cursor for hover */
 }
 
-.nav-links li:hover {
-  text-decoration:  /* Optional: Underline on hover */
-}
+
 
 .container-with-cart {
   display: flex; /* Flexbox to align the button */

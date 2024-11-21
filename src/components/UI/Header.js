@@ -1,38 +1,44 @@
-import React,{useState} from 'react';
-import Button from './Button'; // Assuming Button component exists
-import './Header.css';
-import CartItems from '../Cart/CartItems';
-import Cart from '../Cart/Cart';
-
+import React, { useState } from "react";
+import Button from "./Button";
+import "./Header.css";
+import CartItems from "../Cart/CartItems";
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
-    const [cartIsShown, setCartIsShown] = useState(false);
+  const [cartIsShown, setCartIsShown] = useState(false);
 
-    const toggleCartStatus = () => {
-        setCartIsShown((prevStatus) => !prevStatus);
-    };
-    
+  const toggleCartStatus = () => {
+    setCartIsShown((prevStatus) => !prevStatus);
+  };
+
   return (
     <>
       <div className="horizontal-strip">
-        {/* Left-aligned content (optional, e.g., logo) */}
-        <div></div>
+        {/* Left-aligned content (e.g., logo) */}
+        <div className="logo">
+          <Link to="/"></Link>
+        </div>
 
         {/* Middle-aligned navigation links */}
         <ul className="nav-links">
-          <li>Home</li>
-          <li>Store</li>
-          <li>About</li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/store">Store</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
 
         {/* Right-aligned Cart Button */}
         <div className="container-with-cart">
-          <Button text="Cart" onClick={toggleCartStatus}/>
+          <Button text="Cart" onClick={toggleCartStatus} />
         </div>
       </div>
+
       <div className="generics">The Generics</div>
-     { cartIsShown&& <CartItems closeCart={toggleCartStatus}/>}
-      
+
+      {/* Conditionally render CartItems */}
+      {cartIsShown && <CartItems closeCart={toggleCartStatus} />}
+
+      {/* Render child routes here */}
+      <Outlet />
     </>
   );
 };

@@ -6,20 +6,24 @@ import { CartProvider } from "./components/Cart/CartContext";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 
+// Define routes
 const router = createBrowserRouter([
-  { path: "/home", element: <Home /> },
-  { path: "/store", element: <Store /> },
-  {path:"about",element:<About/>}
+  {
+    path: "/",
+    element: <Header />, // Parent route
+    children: [
+      { path: "home", element: <Home /> },
+      { path: "store", element: <Store /> },
+      { path: "about", element: <About /> },
+    ],
+  },
 ]);
 
 function App() {
   return (
-    <>
-      <CartProvider>
-        <Header />
-        <RouterProvider router={router} />
-      </CartProvider>
-    </>
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   );
 }
 
