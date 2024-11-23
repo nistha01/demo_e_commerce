@@ -1,11 +1,14 @@
 .store-container {
     padding: 20px;
     text-align: center;
+    background-color: #fafefc;
+    color: #30303e;
 }
 
 .store-closed {
     text-align: center;
     padding: 20px;
+    background-color: #080808;
 }
 
 .product-grid {

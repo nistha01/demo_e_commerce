@@ -1,3 +1,4 @@
+
 .horizontal-strip {
   background-color: black; /* Black background */
   height: 50px; /* Fixed height */
@@ -13,24 +14,23 @@
 }
 
 .nav-links {
-  display: flex; /* Flexbox for horizontal alignment */
-  justify-content: center; /* Centers the links */
-  gap: 40px; /* Increases spacing between links */
-  list-style: none; /* Removes default list styling */
+  display: flex !important; /* Flexbox for horizontal alignment */
+  justify-content: center !important; /* Centers the links */
+  gap: 40px !important;/* Increases spacing between links */
+  list-style: none !important;/* Removes default list styling */
   margin: 0; /* Resets margin */
   padding: 0; /* Resets padding */
+  color:white !important;
   
 }
 
-.nav-links li {
-  color: rgb(250, 248, 248); /* Text color for links */
-  cursor: pointer; /* Pointer cursor for hover */
+
+.nav-links a {
+  text-decoration: none !important; /* Removes the underline */
+  color: white !important; /* Sets the text color to white */
+  font-size: 25px; /* Adjusts the font size (optional) */
 }
-.nav-links link {
-  text-decoration: none; /* Removes the underline */
-  color: white; /* Sets the text color to white */
-  font-size: 16px; /* Adjusts the font size (optional) */
-}
+
 
 
 
@@ -50,7 +50,7 @@
 }
 
 .container-with-cart button:hover {
-  background-color: #0056b3; /* Hover background color */
+  background-color: #edeff1; /* Hover background color */
 }
 .generics {
   background-color: rgb(83, 81, 81); /* Black background */

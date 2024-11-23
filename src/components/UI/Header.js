@@ -14,12 +14,11 @@ const Header = () => {
   return (
     <>
       <div className="horizontal-strip">
-        {/* Left-aligned content (e.g., logo) */}
+
         <div className="logo">
           <Link to="/"></Link>
         </div>
 
-        {/* Middle-aligned navigation links */}
         <ul className="nav-links">
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/store">Store</Link></li>
@@ -27,7 +26,6 @@ const Header = () => {
           <li><Link to="/about">About</Link></li>
         </ul>
 
-        {/* Right-aligned Cart Button */}
         <div className="container-with-cart">
           <Button text="Cart" onClick={toggleCartStatus} />
         </div>
@@ -35,10 +33,9 @@ const Header = () => {
 
       <div className="generics">The Generics</div>
 
-      {/* Conditionally render CartItems */}
       {cartIsShown && <CartItems closeCart={toggleCartStatus} />}
 
-      {/* Render child routes here */}
+    
       <Outlet />
     </>
   );

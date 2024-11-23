@@ -3,18 +3,19 @@ import Header from "./components/UI/Header";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Store from "./components/Store/Store";
 import { CartProvider } from "./components/Cart/CartContext";
+import { ModalProvider } from "./components/Movies/ModalContext";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
+import Movies from "./components/Movies/Movies";
 
-// Define routes
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header />, // Parent route
+    element: <Header />, 
     children: [
       { path: "home", element: <Home /> },
       { path: "store", element: <Store /> },
-      { path: "about", element: <About /> },
+      { path: "movies", element: <Movies /> },
+      { path: "", element: <Home /> },
     ],
   },
 ]);
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <CartProvider>
-      <RouterProvider router={router} />
+      <ModalProvider>
+        <RouterProvider router={router} />
+      </ModalProvider>
     </CartProvider>
   );
 }

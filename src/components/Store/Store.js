@@ -51,7 +51,7 @@ const Store = () => {
                             className="product-image"
                         />
                         <h2 className="product-title">{product.title}</h2>
-                        <p className="product-price">${product.price}</p>
+                        <p className="product-price">₹{product.price}</p>
                         <button className="add-to-cart-button" onClick={()=>addToCart(product)}>Add to Cart</button>
                     </div>
                 ))}
