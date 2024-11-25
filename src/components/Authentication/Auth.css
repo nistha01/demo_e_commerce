@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container styles */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+  }
+  
+  /* Form styles */
+  .login-form {
+    background-color: #fff;
+    color: #333;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a11cb;
+  }
+  
+  /* Input styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+  }
+  
+  /* Button styles */
+  .login-button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+  }
+  
+  .login-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Additional Styles */
+  .login-form p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .login-form a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 2rem;
+    }
+  
+    .login-title {
+      font-size: 1.5rem;
+    }
+  
+    .form-group input {
+      font-size: 0.9rem;
+    }
+  
+    .login-button {
+      font-size: 1rem;
+    }
+  }
+  
