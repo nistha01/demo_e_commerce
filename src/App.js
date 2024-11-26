@@ -22,6 +22,7 @@ const AppRouter = () => {
             { path: "store", element: <Store /> },
             { path: "movies", element: <Movies /> },
             { path: "", element: <Home /> },
+            {path:"login",element:<Home/>}
           ]
         : [
             { path: "", element: <Auth /> },// Redirect to Auth when not logged in

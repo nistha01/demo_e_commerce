@@ -1,69 +1,47 @@
-
 .horizontal-strip {
-  background-color: black; /* Black background */
-  height: 50px; /* Fixed height */
-  width: 100%; /* Full width */
-  display: flex; /* Enables flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between left, middle, and right */
-  color: white; /* Text color for items */
-  padding: 0 20px; /* Padding for the left and right edges */
-  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
   overflow-x: hidden;
-  font-size: xx-large; /* Prevents horizontal scrolling */
+  font-size: xx-large;
 }
 
 .nav-links {
-  display: flex !important; /* Flexbox for horizontal alignment */
-  justify-content: center !important; /* Centers the links */
-  gap: 40px !important;/* Increases spacing between links */
-  list-style: none !important;/* Removes default list styling */
-  margin: 0; /* Resets margin */
-  padding: 0; /* Resets padding */
-  color:white !important;
-  
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* Takes remaining space between logo and buttons */
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
 
 .nav-links a {
-  text-decoration: none !important; /* Removes the underline */
-  color: white !important; /* Sets the text color to white */
-  font-size: 25px; /* Adjusts the font size (optional) */
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
 }
 
-
-
-
-
-.container-with-cart {
-  display: flex; /* Flexbox to align the button */
-  justify-content: flex-end; /* Pushes button to the right */
+.right-buttons {
+  display: flex;
+  gap: 10px; /* Small gap between Cart and Logout buttons */
 }
 
-.container-with-cart button {
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* Removes button border */
-  padding: 10px 20px; /* Adds padding to button */
-  border-radius: 5px; /* Rounds button corners */
-  cursor: pointer; /* Pointer cursor on hover */
+.right-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.container-with-cart button:hover {
-  background-color: #edeff1; /* Hover background color */
-}
-.generics {
-  background-color: rgb(83, 81, 81); /* Black background */
-  height: 120px; /* Fixed height */
-  width: 100%; /* Full width */
-  display: flex; /* Enables flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between left, middle, and right */
-  color: white; /* Text color for items */
-  padding: 20px 20px; /* Padding for the left and right edges */
-  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
-  overflow-x: hidden;
-  overflow-y: hidden; /* Prevents horizontal scrolling */
-  font-size: 100px;
-  justify-content: center;
+.right-buttons button:hover {
+  background-color: #edeff1;
 }
